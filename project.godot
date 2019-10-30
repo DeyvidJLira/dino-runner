@@ -16,8 +16,16 @@ _global_script_class_icons={
 [application]
 
 config/name="Dino Runner"
+run/main_scene="res://scenes/Game.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
 
 [rendering]
 
+environment/default_clear_color=Color( 0.788235, 0.788235, 0.788235, 1 )
 environment/default_environment="res://default_env.tres"
