@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Idle (1).png-0b7adf1fa6d334bfe8aeb2f36d7050da.stex"
+path="res://.import/background.png-10823e8e46337afd702582191b7e6141.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dino/idle/Idle (1).png"
-dest_files=[ "res://.import/Idle (1).png-0b7adf1fa6d334bfe8aeb2f36d7050da.stex" ]
+source_file="res://sprites/backgrounds/background.png"
+dest_files=[ "res://.import/background.png-10823e8e46337afd702582191b7e6141.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
