@@ -10,7 +10,7 @@ func _ready():
 	set_position(ground)
 	
 func _physics_process(delta):
-	if !is_dead:
+	if GameVariables.game_state == 1 and !is_dead:
 		set_position(position + GameVariables.speed * speed_factor * Vector2.LEFT * delta)
 
 func _on_AlienA_area_entered(area):

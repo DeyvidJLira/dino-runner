@@ -1,73 +1,12 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://scenes/HUDManager.gd" type="Script" id=2]
 [ext_resource path="res://fonts/MotionControl-Bold.otf" type="DynamicFontData" id=3]
-[ext_resource path="res://scripts/ParallaxBackground.gd" type="Script" id=4]
-[ext_resource path="res://sprites/backgrounds/background.png" type="Texture" id=5]
-[ext_resource path="res://scripts/Dino.gd" type="Script" id=6]
-[ext_resource path="res://sprites/dino/idle/Idle (1).png" type="Texture" id=7]
-[ext_resource path="res://sprites/dino/idle/Idle (2).png" type="Texture" id=8]
-[ext_resource path="res://sprites/dino/idle/Idle (3).png" type="Texture" id=9]
-[ext_resource path="res://sprites/dino/idle/Idle (4).png" type="Texture" id=10]
-[ext_resource path="res://sprites/dino/idle/Idle (5).png" type="Texture" id=11]
-[ext_resource path="res://sprites/dino/idle/Idle (6).png" type="Texture" id=12]
-[ext_resource path="res://sprites/dino/idle/Idle (7).png" type="Texture" id=13]
-[ext_resource path="res://sprites/dino/idle/Idle (8).png" type="Texture" id=14]
-[ext_resource path="res://sprites/dino/idle/Idle (9).png" type="Texture" id=15]
-[ext_resource path="res://sprites/dino/idle/Idle (10).png" type="Texture" id=16]
-[ext_resource path="res://sprites/dino/die/Dead (1).png" type="Texture" id=17]
-[ext_resource path="res://sprites/dino/die/Dead (2).png" type="Texture" id=18]
-[ext_resource path="res://sprites/dino/die/Dead (3).png" type="Texture" id=19]
-[ext_resource path="res://sprites/dino/die/Dead (4).png" type="Texture" id=20]
-[ext_resource path="res://sprites/dino/die/Dead (5).png" type="Texture" id=21]
-[ext_resource path="res://sprites/dino/die/Dead (6).png" type="Texture" id=22]
-[ext_resource path="res://sprites/dino/die/Dead (7).png" type="Texture" id=23]
-[ext_resource path="res://sprites/dino/die/Dead (8).png" type="Texture" id=24]
-[ext_resource path="res://sprites/dino/run/Run (1).png" type="Texture" id=25]
-[ext_resource path="res://sprites/dino/run/Run (2).png" type="Texture" id=26]
-[ext_resource path="res://sprites/dino/run/Run (3).png" type="Texture" id=27]
-[ext_resource path="res://sprites/dino/run/Run (4).png" type="Texture" id=28]
-[ext_resource path="res://sprites/dino/run/Run (5).png" type="Texture" id=29]
-[ext_resource path="res://sprites/dino/run/Run (6).png" type="Texture" id=30]
-[ext_resource path="res://sprites/dino/run/Run (7).png" type="Texture" id=31]
-[ext_resource path="res://sprites/dino/run/Run (8).png" type="Texture" id=32]
-[ext_resource path="res://sprites/dino/jump/Jump (1).png" type="Texture" id=33]
-[ext_resource path="res://sprites/dino/jump/Jump (2).png" type="Texture" id=34]
-[ext_resource path="res://sprites/dino/jump/Jump (3).png" type="Texture" id=35]
-[ext_resource path="res://sprites/dino/jump/Jump (4).png" type="Texture" id=36]
-[ext_resource path="res://sprites/dino/jump/Jump (5).png" type="Texture" id=37]
-[ext_resource path="res://sprites/dino/jump/Jump (6).png" type="Texture" id=38]
-[ext_resource path="res://sprites/dino/jump/Jump (7).png" type="Texture" id=39]
-[ext_resource path="res://sprites/dino/jump/Jump (8).png" type="Texture" id=40]
-[ext_resource path="res://sprites/dino/jump/Jump (9).png" type="Texture" id=41]
-[ext_resource path="res://sprites/dino/jump/Jump (10).png" type="Texture" id=42]
-[ext_resource path="res://sprites/dino/jump/Jump (11).png" type="Texture" id=43]
-[ext_resource path="res://sprites/dino/jump/Jump (12).png" type="Texture" id=44]
-[ext_resource path="res://sprites/dino/walk/Walk (1).png" type="Texture" id=45]
-[ext_resource path="res://sprites/dino/walk/Walk (2).png" type="Texture" id=46]
-[ext_resource path="res://sprites/dino/walk/Walk (3).png" type="Texture" id=47]
-[ext_resource path="res://sprites/dino/walk/Walk (4).png" type="Texture" id=48]
-[ext_resource path="res://sprites/dino/walk/Walk (5).png" type="Texture" id=49]
-[ext_resource path="res://sprites/dino/walk/Walk (6).png" type="Texture" id=50]
-[ext_resource path="res://sprites/dino/walk/Walk (7).png" type="Texture" id=51]
-[ext_resource path="res://sprites/dino/walk/Walk (8).png" type="Texture" id=52]
-[ext_resource path="res://sprites/dino/walk/Walk (9).png" type="Texture" id=53]
-[ext_resource path="res://sprites/dino/walk/Walk (10).png" type="Texture" id=54]
-[ext_resource path="res://scripts/Alien.gd" type="Script" id=55]
-[ext_resource path="res://sprites/aliens/a/idle/Bat_Booger_1.png" type="Texture" id=56]
-[ext_resource path="res://sprites/aliens/a/idle/Bat_Booger_2.png" type="Texture" id=57]
-[ext_resource path="res://sprites/aliens/a/idle/Bat_Booger_3.png" type="Texture" id=58]
-[ext_resource path="res://sprites/aliens/a/idle/Bat_Booger_4.png" type="Texture" id=59]
-[ext_resource path="res://sprites/aliens/a/idle/Bat_Booger_5.png" type="Texture" id=60]
-[ext_resource path="res://sprites/aliens/a/idle/Bat_Booger_6.png" type="Texture" id=61]
-[ext_resource path="res://sprites/aliens/a/die/Bat__Booger_FX0001.png" type="Texture" id=62]
-[ext_resource path="res://sprites/aliens/a/die/Bat__Booger_FX0002.png" type="Texture" id=63]
-[ext_resource path="res://sprites/aliens/a/die/Bat__Booger_FX0003.png" type="Texture" id=64]
-[ext_resource path="res://sprites/aliens/a/die/Bat__Booger_FX0004.png" type="Texture" id=65]
-[ext_resource path="res://sprites/aliens/a/die/Bat__Booger_FX0005.png" type="Texture" id=66]
-[ext_resource path="res://sprites/aliens/a/die/Bat__Booger_FX0006.png" type="Texture" id=67]
-[ext_resource path="res://sprites/aliens/a/die/Bat__Booger_FX0007.png" type="Texture" id=68]
+[ext_resource path="res://ui/StartUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/ParallaxBackground.gd" type="Script" id=5]
+[ext_resource path="res://sprites/backgrounds/background.png" type="Texture" id=6]
+[ext_resource path="res://characters/Dino.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=3]
 size = 72
@@ -76,54 +15,6 @@ font_data = ExtResource( 3 )
 [sub_resource type="DynamicFont" id=4]
 size = 72
 font_data = ExtResource( 3 )
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "idle",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
-"loop": false,
-"name": "die",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
-"loop": true,
-"name": "run",
-"speed": 9.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
-"loop": false,
-"name": "jump",
-"speed": 14.0
-}, {
-"frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
-"loop": true,
-"name": "walk",
-"speed": 12.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 28.0
-height = 94.0
-
-[sub_resource type="SpriteFrames" id=5]
-animations = [ {
-"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ) ],
-"loop": true,
-"name": "idle",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ) ],
-"loop": false,
-"name": "die",
-"speed": 10.0
-} ]
-
-[sub_resource type="CircleShape2D" id=6]
-radius = 30.0
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -146,7 +37,6 @@ margin_top = 16.0
 margin_right = -16.0
 
 [node name="Container" type="HSplitContainer" parent="Canvas/HUD/Margin"]
-editor/display_folded = true
 margin_right = 1888.0
 margin_bottom = 164.0
 custom_constants/separation = 500
@@ -168,8 +58,11 @@ size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "Distance Máx: 30"
 
+[node name="StartUI" parent="Canvas" instance=ExtResource( 4 )]
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-script = ExtResource( 4 )
+editor/display_folded = true
+script = ExtResource( 5 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 editor/display_folded = true
@@ -181,47 +74,10 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 320, -180 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 centered = false
 offset = Vector2( -320, 0 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[node name="Dino" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 230, 936 )
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="AnimatedSprite" parent="Dino"]
-scale = Vector2( 0.4, 0.4 )
-frames = SubResource( 1 )
-animation = "idle"
-frame = 5
-playing = true
-
-[node name="Collision" type="CollisionShape2D" parent="Dino"]
-position = Vector2( -50, 2 )
-shape = SubResource( 2 )
-
-[node name="AlienA" type="Area2D" parent="."]
-position = Vector2( 2100, 928 )
-script = ExtResource( 55 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="AnimatedSprite" parent="AlienA"]
-scale = Vector2( 0.4, 0.4 )
-frames = SubResource( 5 )
-animation = "idle"
-frame = 1
-playing = true
-
-[node name="Collision" type="CollisionShape2D" parent="AlienA"]
-position = Vector2( -6.86267, 5.88232 )
-shape = SubResource( 6 )
-[connection signal="area_entered" from="AlienA" to="AlienA" method="_on_AlienA_area_entered"]
-[connection signal="animation_finished" from="AlienA/Sprite" to="AlienA" method="_on_Sprite_animation_finished"]
+[node name="Dino" parent="." instance=ExtResource( 7 )]

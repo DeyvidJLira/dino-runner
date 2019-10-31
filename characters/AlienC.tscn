@@ -1,0 +1,52 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/Alien.gd" type="Script" id=1]
+[ext_resource path="res://sprites/aliens/c/idle/Bat_Purple_1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/aliens/c/idle/Bat_Purple_2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/aliens/c/idle/Bat_Purple_3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/aliens/c/idle/Bat_Purple_4.png" type="Texture" id=5]
+[ext_resource path="res://sprites/aliens/c/idle/Bat_Purple_5.png" type="Texture" id=6]
+[ext_resource path="res://sprites/aliens/c/idle/Bat_Purple_6.png" type="Texture" id=7]
+[ext_resource path="res://sprites/aliens/c/die/Bat__Purple_FX0001.png" type="Texture" id=8]
+[ext_resource path="res://sprites/aliens/c/die/Bat__Purple_FX0002.png" type="Texture" id=9]
+[ext_resource path="res://sprites/aliens/c/die/Bat__Purple_FX0003.png" type="Texture" id=10]
+[ext_resource path="res://sprites/aliens/c/die/Bat__Purple_FX0004.png" type="Texture" id=11]
+[ext_resource path="res://sprites/aliens/c/die/Bat__Purple_FX0005.png" type="Texture" id=12]
+[ext_resource path="res://sprites/aliens/c/die/Bat__Purple_FX0006.png" type="Texture" id=13]
+[ext_resource path="res://sprites/aliens/c/die/Bat__Purple_FX0007.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": false,
+"name": "die",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 30.0
+
+[node name="AlienC" type="Area2D"]
+position = Vector2( 2100, 928 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 5
+playing = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( -6.86267, 5.88232 )
+shape = SubResource( 2 )
+[connection signal="area_entered" from="." to="." method="_on_AlienA_area_entered"]
+[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
