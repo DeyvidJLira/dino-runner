@@ -19,6 +19,10 @@ config/name="Dino Runner"
 run/main_scene="res://scenes/Start.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVariables="*res://scripts/PlayerVariables.gd"
+
 [display]
 
 window/size/width=1920
