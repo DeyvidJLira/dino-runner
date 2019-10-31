@@ -32,7 +32,14 @@ func _physics_process(delta):
 				$Sprite.play("walk")
 			set_position(FLOOR)
 			velocity = Vector2()
-		
+			
+	if GameVariables.game_state == 2:
+		if get_position().y != FLOOR.y: 
+			velocity.y +=  GRAVITY * delta * GRAVITY_MODIFIER
+			position += velocity * delta
+		if get_position().y > FLOOR.y:
+			set_position(FLOOR)
+			velocity = Vector2()
 
 func die():
 	PlayerVariables.is_dead = true

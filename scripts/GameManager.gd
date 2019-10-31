@@ -1,5 +1,7 @@
 extends Node2D
 
+signal call_restart()
+
 var Aliens = [
 	preload("res://characters/AlienA.tscn"),
 	preload("res://characters/AlienB.tscn"),
@@ -46,7 +48,6 @@ func _process(delta):
 			time_elapsed = 0
 			speed += speed_factor
 			GameVariables.speed = speed
-			GameVariables.game_state = 1
 			get_node("Dino").is_running = true
 		if time_elapsed > increase_factor:
 			level += 1
@@ -54,7 +55,15 @@ func _process(delta):
 			time_elapsed = 0
 		ui_update()
 	if GameVariables.game_state == 1 and PlayerVariables.is_dead:
+		PlayerVariables.distance_max = distance_max
+		$Canvas/GameoverUI.visible = true
 		GameVariables.game_state = 2
+		
+	if GameVariables.game_state == 2 :
+		if Input.is_action_just_pressed("ui_jump"):
+			GameVariables.reset()
+			PlayerVariables.reset()
+			get_tree().reload_current_scene()
 
 func ui_update():
 	$Canvas/HUD.update_distance(int(distance))
