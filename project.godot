@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+GameVariables="*res://scripts/GameVariables.gd"
 PlayerVariables="*res://scripts/PlayerVariables.gd"
 
 [display]
@@ -48,5 +49,4 @@ ui_jump={
 
 [rendering]
 
-environment/default_clear_color=Color( 0.788235, 0.788235, 0.788235, 1 )
 environment/default_environment="res://default_env.tres"

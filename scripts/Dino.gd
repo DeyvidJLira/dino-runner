@@ -5,7 +5,6 @@ const GRAVITY = 3000
 const GRAVITY_MODIFIER = 2
 const JUMP_HEIGHT = -1200
 
-var in_game = false
 var velocity = Vector2()
 var is_running = false
 
@@ -14,7 +13,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):	
-	if in_game:
+	if GameVariables.game_state == 1 and !PlayerVariables.is_dead:
 		if Input.is_action_pressed("ui_jump"):
 			velocity.y += GRAVITY * delta
 		else:
@@ -34,5 +33,7 @@ func _physics_process(delta):
 			set_position(FLOOR)
 			velocity = Vector2()
 		
-	
 
+func die():
+	PlayerVariables.is_dead = true
+	$Sprite.play("die")

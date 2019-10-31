@@ -1,8 +1,6 @@
 extends Node2D
 
-#0 - INIT, 1 - IN_GAME, 2 - PAUSED
 
-var game_state = 0
 var level = 1
 var level_elapsed = 0
 var time_elapsed = 0
@@ -18,12 +16,11 @@ func _ready():
 	ui_update()
 
 func _process(delta):
-	if game_state == 0:
+	if GameVariables.game_state == 0:
 		if Input.is_action_pressed("ui_jump"):
-			get_node("ParallaxBackground").speed = speed
-			get_node("Dino").in_game = true
-			game_state = 1
-	if game_state == 1:
+			GameVariables.game_state = 1
+			GameVariables.speed = speed
+	if GameVariables.game_state == 1 and !PlayerVariables.is_dead:
 		distance += delta * (speed/8)
 		if distance > distance_max:
 			distance_max = distance
@@ -32,13 +29,15 @@ func _process(delta):
 			level += 1
 			level_elapsed = 1
 			speed += speed_factor
-			get_node("ParallaxBackground").speed = speed
+			GameVariables.speed = speed
+			GameVariables.game_state = 1
 			get_node("Dino").is_running = true
 		if time_elapsed > increase_factor * level:
 			level += 1
 			speed += speed_factor
-			get_node("ParallaxBackground").speed = speed
 		ui_update()
+	if GameVariables.game_state == 1 and PlayerVariables.is_dead:
+		GameVariables.game_state = 2
 
 func ui_update():
 	$Canvas/HUD.update_distance(int(distance))
