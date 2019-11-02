@@ -26,6 +26,9 @@ func _ready():
 	ui_update()
 
 func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().paused = true
+		$Canvas/PauseUI.visible = true
 	if GameVariables.game_state == 0:
 		if Input.is_action_just_pressed("ui_jump"):
 			GameVariables.game_state = 1
