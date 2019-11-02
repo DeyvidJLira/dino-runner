@@ -21,6 +21,7 @@ func _physics_process(delta):
 			
 		if Input.is_action_just_pressed("ui_jump") and position == FLOOR:
 			$Sprite.play("jump")
+			$JumpFX.play()
 			velocity.y = JUMP_HEIGHT
 			
 		position += velocity * delta
@@ -42,5 +43,6 @@ func _physics_process(delta):
 			velocity = Vector2()
 
 func die():
+	$DieFX.play()
 	PlayerVariables.is_dead = true
 	$Sprite.play("die")

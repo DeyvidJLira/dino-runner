@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Baby-Shark.ogg-1b3ba6b17da5a7bd370eafe5eb5bba46.oggstr"
+
+[deps]
+
+source_file="res://sounds/Baby-Shark.ogg"
+dest_files=[ "res://.import/Baby-Shark.ogg-1b3ba6b17da5a7bd370eafe5eb5bba46.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

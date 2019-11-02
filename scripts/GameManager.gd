@@ -10,16 +10,15 @@ var Aliens = [
 ]
 
 var level = 1
-var level_elapsed = 0
 var time_elapsed = 0
 var speed = 100
-var speed_factor = 100
-var increase_factor = 10
+var speed_factor = 50
+var increase_factor = 6
 var distance = 0
 var distance_max = 0
 
 var spawn_time_elapsed = 0
-var spawn_time_interval = 2
+var spawn_time_interval = 4
 
 func _ready():
 	distance = 0
@@ -42,16 +41,18 @@ func _process(delta):
 		if distance > distance_max:
 			distance_max = distance
 		time_elapsed += delta
-		if time_elapsed > increase_factor * level and level == 1:
+		if time_elapsed > increase_factor and level == 1:
 			level += 1
-			level_elapsed = 1
 			time_elapsed = 0
 			speed += speed_factor
 			GameVariables.speed = speed
 			get_node("Dino").is_running = true
 		if time_elapsed > increase_factor:
 			level += 1
+			if spawn_time_interval > 0.2:
+				spawn_time_interval -= 0.1
 			speed += speed_factor
+			GameVariables.speed = speed
 			time_elapsed = 0
 		ui_update()
 	if GameVariables.game_state == 1 and PlayerVariables.is_dead:
